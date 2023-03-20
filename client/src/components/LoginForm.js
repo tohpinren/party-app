@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const LoginForm = ({ onLogin }) => {
@@ -40,10 +39,6 @@ const LoginForm = ({ onLogin }) => {
         <input type="password" id="password" value={password} onChange={handlePasswordChange} required />
       </div>
       <button type="submit">Login</button>
-      <div>
-        <p>Don't have an account?</p>
-        <Link to="/register">Register</Link>
-      </div>
       {errorMessage && <div>{errorMessage}</div>}
     </form>
   );

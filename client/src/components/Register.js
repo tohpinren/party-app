@@ -57,7 +57,8 @@ const Register = () => {
 
   return (
     <div>
-      <form onSubmit={handleRegister}>
+      <form onSubmit={handleRegister} className='register-form'>
+        <h1>Register</h1>
         <label>
           Email:
           <input type="email" value={email} onChange={handleEmailChange} required />
@@ -72,9 +73,9 @@ const Register = () => {
           Confirm Password:
           <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
         </label>
-        <label>
+        <label className='consent'>
           <input type="checkbox" checked={consentChecked} onChange={handleConsentChange} required />
-          I give my consent to register
+          <p>I give my consent to register</p>
         </label>
         <br />
         {errorMessage && <div>{errorMessage}</div>}

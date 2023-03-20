@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Input from './Input';
 import ListParties from './ListParties';
 import LogOut from './Logout';
 import LoginForm from './LoginForm';
@@ -87,15 +86,35 @@ class Party extends Component {
 
     return (
         <div>
-            <div>
-                {isLoggedIn
-                    ? (<LogOut onLogout={this.handleLogout} />)
-                    : (<LoginForm onLogin={this.handleLogin} />)
-                }
-            </div>
-            <div>
-                <h1>My Parties</h1>
-                {isLoggedIn && <Link to="/create-party">Create Party</Link>}
+            <header className='header'>
+                <div className='party'>
+                  <img src="party.png" alt="party-when-logo" className='party-logo' />
+                  <h1>Party When?</h1>
+                </div>
+                <div className='header-right'>
+                  {isLoggedIn ? (
+                          <>
+                            <div className='logout'>
+                              <p>Welcome, {localStorage.getItem('email')}</p>
+                              <LogOut onLogout={this.handleLogout} />
+                            </div>
+                          </>
+                      ) : (
+                          <>
+                            <div className='login'>
+                              <LoginForm onLogin={this.handleLogin} />
+                              <div className='register'>
+                                <p>Don't have an account?</p>
+                                <Link to="/register" className='register-button'>Register</Link>
+                              </div>
+                            </div>
+                          </>
+                      )}
+                </div>
+            </header>
+            <div className='parties'>
+                <h1>All Parties</h1>
+                {isLoggedIn && <Link to="/create-party" className='create-party-button'>Create Party</Link>}
                 <ListParties isLoggedIn={isLoggedIn} parties={parties} joinParty={this.joinParty} deleteParty={this.deleteParty} leaveParty={this.leaveParty} />
             </div>
         </div>

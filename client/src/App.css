@@ -2,22 +2,143 @@
   text-align: center;
   font-size: calc(10px + 2vmin);
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-input {
-  height: 40px;
-  width: 50%;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #101113;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+  
+header input {
+  padding: 5px 10px;
+  font-size: medium;
+  border-radius: 5px;
   border: none;
-  border-bottom: 2px #101113 solid;
-  background: none;
-  font-size: 1.5rem;
-  color: #787a80;
 }
 
-input:focus {
-  outline: none;
+header button {
+  font-size: medium;
+  color: #fff;
+  background-color: #282c34;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #787a80;
+}
+
+.party {
+  display: flex;
+  flex-direction: row;
+}
+
+.party-logo {
+  width: 100px;
+  height: auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout {
+  margin-right: 30px;
+}
+
+.logout button {
+  font-size: medium;
+  color: #fff;
+  background-color: #282c34;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.register {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: medium;
+}
+
+.create-party-button {
+  text-decoration: none;
+  padding: 10px;
+  width: 14%;
+  height: 50%;
+  border: none;
+  font-size: 25px;
+  background: #101113;
+  border-radius: 5px;
+  color: #787a80;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.create-party-button:hover {
+  background-color: #171a1f;
+}
+
+.register-button {
+  text-decoration: none;
+  font-size: medium;
+  color: #fff;
+  background-color: #282c34;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.register-button:hover {
+  background-color: #787a80;
+}
+
+.parties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -32,8 +153,8 @@ button {
   cursor: pointer;
 }
 
-button:focus {
-  outline: none;
+button:hover {
+  background-color: #171a1f;
 }
 
 ul {
@@ -42,6 +163,8 @@ ul {
   padding: 15px;
   background: #171a1f;
   border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 li {
@@ -51,7 +174,66 @@ li {
   background: #282c34;
   border-radius: 5px;
   overflow-wrap: break-word;
+}
+
+.party-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.party-form button {
+  margin-top: 20px;
+  width: 20%;
+  height: 45px;
+  border: none;
+  margin-left: 10px;
+  font-size: 25px;
+  background: #101113;
+  border-radius: 5px;
+  color: #787a80;
   cursor: pointer;
+}
+
+.party-form button:hover {
+  background-color: #171a1f;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.register-form button {
+  width: 20%;
+  height: 45px;
+  border: none;
+  font-size: 25px;
+  background: #101113;
+  border-radius: 5px;
+  color: #787a80;
+  cursor: pointer;
+}
+
+.consent {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.consent input {
+  width: 50px;
+}
+
+.register-form button:hover {
+  background-color: #171a1f;
 }
 
 @media only screen and (min-width: 300px) {
@@ -72,11 +254,11 @@ li {
 
 @media only screen and (min-width: 640px) {
   .App {
-    width: 60%;
+    width: 100%;
   }
 
   input {
-    width: 50%;
+    width: 70%;
   }
 
   button {

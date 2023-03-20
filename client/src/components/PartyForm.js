@@ -61,7 +61,8 @@ const PartyForm = ({ }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='party-form'>
+      <h1>Create a Party</h1>
       <div>
         <label htmlFor="party_name">Party Name:</label>
         <input type="text" id="party_name" value={name} onChange={handleNameChange} required />
