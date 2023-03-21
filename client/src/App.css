@@ -40,7 +40,7 @@ header label {
   font-size: 1.2rem;
   margin-right: 10px;
 }
-  
+
 header input {
   padding: 5px 10px;
   font-size: medium;
@@ -261,13 +261,17 @@ li {
   background-color: #171a1f;
 }
 
+.error-msg {
+  font-size: medium;
+}
+
 @media only screen and (min-width: 300px) {
   .App {
     width: 100%;
   }
 
   input {
-    width: 50%
+    width: 50%;
   }
 
   button {

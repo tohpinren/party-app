@@ -59,9 +59,7 @@ router.post("/login", async (req, res) => {
 
     // Make sure inputs are not empty
     if (!email || !password) {
-      return res
-        .status(400)
-        .json({ message: "Please enter all fields" });
+      return res.status(400).json({ message: "Please enter all fields" });
     }
 
     // Find user in database
@@ -69,9 +67,7 @@ router.post("/login", async (req, res) => {
 
     // If not found, return error
     if (!user) {
-      return res
-        .status(401)
-        .json({ message: "Email not found" });
+      return res.status(401).json({ message: "Email not found" });
     }
 
     // Compare password
@@ -91,12 +87,6 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
 
-    // // Save token
-    // user.token = token;
-
-    // // Save token to cookie
-    // res.cookie = `token=${token}`;
-
     res.status(200).json({ token, email: user.email });
   } catch (err) {
     console.log(err);
@@ -106,9 +96,9 @@ router.post("/login", async (req, res) => {
 
 // Logout
 router.post("/logout", (req, res) => {
-  // Remove token from cookie
-  // res.cookie = "";
-  res.status(200).json({ message: "User logged out successfully", success: true });
+  res
+    .status(200)
+    .json({ message: "User logged out successfully", success: true });
 });
 
 module.exports = router;
