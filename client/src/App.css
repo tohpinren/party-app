@@ -14,6 +14,8 @@ header {
   padding: 10px;
   color: #fff;
   width: 100%;
+  position: fixed;
+  height: 100px;
 }
 
 header h1 {
@@ -93,6 +95,11 @@ header button:hover {
   width: 100px;
 }
 
+.logout p {
+  font-size: large;
+  margin: 8px;
+}
+
 .register {
   display: flex;
   flex-direction: row;
@@ -134,11 +141,29 @@ header button:hover {
   background-color: #787a80;
 }
 
+.register-form input {
+  padding: 5px 10px;
+  font-size: medium;
+  border-radius: 5px;
+  border: none;
+}
+
+.party-form input {
+  padding: 5px 10px;
+  font-size: medium;
+  border-radius: 5px;
+  border: none;
+}
+
 .parties {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.parties h1 {
+  margin-top: 150px;
 }
 
 button {
@@ -238,15 +263,15 @@ li {
 
 @media only screen and (min-width: 300px) {
   .App {
-    width: 80%;
+    width: 100%;
   }
 
   input {
-    width: 100%
+    width: 50%
   }
 
   button {
-    width: 100%;
+    width: 50%;
     margin-top: 15px;
     margin-left: 0;
   }
