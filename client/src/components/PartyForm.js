@@ -114,6 +114,7 @@ const PartyForm = ({}) => {
           required
         />
       </div>
+      {errorMessage && <div className="error-msg">{errorMessage}</div>}
       <button type="submit">Create Party</button>
     </form>
   );
