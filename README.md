@@ -1,3 +1,10 @@
-Party Web App for users to plan parties and join parties organised by others
+# Party App
+A party web app that allows users to plan parties and join parties organised by others.
 
-Built on MERN stack
+I built this web app to learn the popular MERN stack.
+
+## Built with
+- MongoDB
+- Express
+- React
+- Node
